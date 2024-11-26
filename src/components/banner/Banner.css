@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    background-color: rgba(22, 22, 22, 0.02);
+    backdrop-filter: blur(5px);
+    /*padding: 10px;*/
+    height: 316px;
+    overflow: auto;
+}
+
+.image_container {
+
+}
+
+.banner_image {
+    height: 260px;
+}
+
+.banner_title {
+}

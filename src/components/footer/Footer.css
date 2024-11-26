@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.footer{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+}
+
+.footer-container{
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    max-width: 1200px;
+}
+
+.contact_list{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.contact_list_item{
+    margin: 10px 20px;
+
+}
+
+.contact_list_item > a > i:hover{
+    color: #F7931E;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(247, 147, 30, 0.15);
+    padding: 10px;
+    flex-basis: 100%;
+}

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.nf_section {
+display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nf_content {
+    padding: 20px;
+    margin: 5px;
+    border-left: 20px solid darkred;
+    /*box-shadow: 0 0 50px rgba(247, 147, 30, 0.25);*/
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
+}
+
+.nf_title, .nf_information{
+    line-height: 34pt;
+
+}
+
+.nf_title{
+    color: darkred;
+}
+
+.nf_solution{
+    color: darkgreen;
+}

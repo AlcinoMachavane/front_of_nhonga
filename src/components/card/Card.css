@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    border: 1px solid white;
+    margin: 10px;
+    transition: .5s ease-in-out;
+}
+
+.card:hover{
+    translate: 0 -5px;
+    border: 1px solid #F7931E;
+}
+
+.card_image {
+    width: 200px;
+    height: 200px;
+    border-bottom: 1px solid #F7931E;
+}
+
+.card_name {
+    margin: 5px auto;
+    color: #F7931E;
+}
+
+.card_caption {
+    margin: 5px auto;
+}
+
+.card_description {
+    text-align: center;
+    margin-bottom: 20px;
+}

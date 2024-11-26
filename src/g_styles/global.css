@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #888888;
+    /*font-family: "Candara Light", sans-serif;*/
+    /*font-family: "MS Gothic", sans-serif;*/
+    /*font-family: "Constantia", sans-serif;*/
+    font-family: "C Gothic", sans-serif;
+    line-height: 1.4em;
+    font-weight: 400;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+body{
+    background-image: url("../assets/images/system_images/error/not_found_lines-01.svg");
+    background-position: top;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    /*background-color: black;*/
+    /*background-color: white;*/
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+:root{
+    --border: linear-gradient(to right, orangered, red, blueviolet);
+    --background: orange;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+.main_of_page {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: calc(100vh - 146px);
+    overflow: auto;
+}
+
+.content_width{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(22, 22, 22, 0.02);
+    backdrop-filter: blur(5px);
+}
+
+.standard_section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/* Aplica a todos os elementos da página */
+* {
+    scrollbar-width: thin !important; /* Apenas para Firefox */
+    scrollbar-color: #F7931E rgba(240, 240, 240, 0.15) !important; /* Cor da barra e fundo para Firefox */
+}
+
+/* Webkit (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+    width: 1px !important; /* Largura da barra de rolagem vertical */
+    height: 1px !important; /* Altura da barra de rolagem horizontal */
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(240, 240, 240, 0.15) !important; /* Cor de fundo da barra */
+    border-radius: 2px !important;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #F7931E !important; /* Cor da barra de rolagem */
+    border-radius: 2px !important; /* Cantos arredondados */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #F7931E !important; /* Cor ao passar o mouse */
+}
+
+*::-webkit-scrollbar-corner {
+    background: rgba(240, 240, 240, 0.15) !important; /* Cor do canto entre as barras */
+}
