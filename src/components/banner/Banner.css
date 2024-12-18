@@ -2,16 +2,34 @@
 
 .banner {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
     width: 100%;
     background-color: rgba(22, 22, 22, 0.02);
     backdrop-filter: blur(5px);
-    /*padding: 10px;*/
-    height: 316px;
+    height: 110px;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.10);
+    transition: .2s ease-in-out;
+}
+
+.banner:hover{
+    height: 210px;
+}
+
+.centralise_posts{
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    max-width: 1200px;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
     overflow: auto;
+    margin: 0 auto;
+    transition: .2s ease-in-out;
+}
+
+.centralise_posts:hover{
+    /*background-color: #F7931E;*/
+
 }
 
 .image_container {
@@ -19,7 +37,18 @@
 }
 
 .banner_image {
-    height: 260px;
+    height: 100px;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+    transition: .5s ease-in-out;
+}
+
+.banner_image:hover {
+    border-radius: 5%;
+    border: 2px solid darkred;
+    height: 200px;
+
 }
 
 .banner_title {

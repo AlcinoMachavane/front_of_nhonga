@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/* Flex Utilities */
+.column_flexing {
+    flex-direction: column;
+}
+
+.row_flexing {
+    flex-direction: row;
+}
+
+.content_width_about {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.client_head_about_article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    padding: 20px;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+}
+
+.client_head_about_article_image_container {
+    margin-right: 30px;
+}
+
+.client_head_about_article_image {
+    height: 200px;
+    border-radius: 2px;
+    border: 1px solid whitesmoke;
+}
+
+.client_head_main_title {
+    font-size: 22pt;
+    font-weight: bold;
+    color: #F7931E;
+}
+
+.client_head_main_caption {
+    margin-bottom: 20px;
+}
+
+.client_head_main_caption > i {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.client_head_paragraph {
+    text-align: justify;
+}
+
+/* Central Section Styles */
+.client_page_about_article {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+}
+
+.client_main_about_article_image_container {
+    margin: 0 10px;
+}
+
+.client_page_about_content_container {
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    width: 300px;
+    min-height: 700px;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+/* CTA Section Styles */
+.client_page_cta_article {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    padding: 20px 10px;
+    border: 1px dotted green;
+}
+
+.client_page_cta_content_container {
+    max-width: 80%;
+}
+
+.buttons_space {
+    max-width: 20%;
+}
+
+/* Footer Section Styles */
+.client_page_awards_article {
+    display: flex;
+    margin: 100px auto;
+}
+
+.client_page_awards_icon_container {
+    display: flex;
+    padding: 20px;
+    border-radius: 50%;
+    margin-right: 60px;
+    background-color: rgba(85, 107, 47, 0.22);
+}
+
+.client_page_awards_icon_container > i {
+    color: gold;
+    font-size: 80px;
+    text-shadow: 0 0 8px white;
+}
+
+.client_page_testimony_article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: rgba(85, 107, 47, 0.4);
+    min-height: 800px;
+    clip-path: polygon(0 0, 100% 250px, 100% 100%, 0 100%);
+}
+
+.client_main_testimony_article_image_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 400px;
+    background-color: black;
+    z-index: 1;
+}
+
+.client_main_testimony_article_image {
+    height: 90%;
+    width: 90%;
+}
+
+.client_page_testimony_content_container {
+    max-width: 400px;
+    background-color: rgba(22, 22, 22, 0.02);
+    backdrop-filter: blur(5px);
+}
+
+.client_page_testimony_content_container > .client_page_caption,
+.client_page_testimony_content_container > .client_page_paragraph {
+    color: white;
+}

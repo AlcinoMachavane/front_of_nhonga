@@ -1,5 +1,4 @@
 {
-  "homepage": "https://AlcinoMachavane.github.io/front_of_nhonga",
   "name": "front_of_nhonga",
   "private": true,
   "version": "0.0.0",
@@ -13,10 +12,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@types/react-router-dom": "^5.3.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

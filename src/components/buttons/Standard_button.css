@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+button{
+    background: none;
+    border: none;
+
+}
+
+.button_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-basis: 100%;
+    margin: 20px 0;
+}
+
+.standard_button {
+    padding: 5px;
+    border-radius: 25px  25px 0 25px;
+    transition: .3s ease-in-out;
+}
+
+.accept{
+    border-left: 1px solid darkgreen;
+    border-top: 1px solid darkgreen;
+    border-right: 4px solid #F7931E;
+    border-bottom: 1px solid transparent;
+}
+
+.accept:hover{
+    color: darkgreen;
+    border-right: 4px solid darkgreen;
+    border-bottom: 1px solid darkgreen;
+    border-left: 1px solid #F7931E;
+    border-top: 1px solid #F7931E;
+}
+
+.deny{
+    border-left: 1px solid darkred;
+    border-top: 1px solid darkred;
+    border-right: 4px solid #F7931E;
+    border-bottom: 1px solid transparent;
+}
+.deny:hover{
+    color: darkred;
+    border-left: 1px solid #F7931E;
+    border-top: 1px solid #F7931E;
+    border-right: 4px solid darkred;
+    border-bottom: 1px solid darkred;
+}

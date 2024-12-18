@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/* Estilos da galeria */
+
+.client_page_gallery_article{
+}
+
+.client_page_main_title{
+}
+
+.client_page_gallery_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gallery_image{
+    width: 300px;
+    object-fit: cover;
+}
+
+.client_page_gallery_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 10px 20px;
+}
+
+.client_page_caption{
+}
+
+.client_page_paragraph{
+    text-align: justify;
+}
+
+.client_page_buying_functionalities{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 20px;
+    /*border: 1px dotted #F7931E;*/
+}
+
+
+/* Tornar as imagens iniciais em telas pequenas */
+@media (max-width: 650px) {
+    .client_page_gallery_card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery_image {
+        /*max-width: 300px;*/
+        /* Garantir que a imagem ocupe toda a largura disponível */
+        width: 100%;
+    }
+}
+

@@ -35,6 +35,10 @@ li{
     list-style: none;
 }
 
+input, textarea{
+    border: none;
+}
+
 :root{
     --border: linear-gradient(to right, orangered, red, blueviolet);
     --background: orange;
@@ -46,13 +50,14 @@ li{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    height: calc(100vh - 146px);
+    height: calc(100vh - 122px);
     overflow: auto;
 }
 
 .content_width{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
     background-color: rgba(22, 22, 22, 0.02);
@@ -65,6 +70,12 @@ li{
     width: 100%;
     justify-content: space-around;
 
+}
+
+
+.centralize {
+    justify-content: center;
+    align-items: center;
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////*/
 

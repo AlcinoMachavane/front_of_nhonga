@@ -21,6 +21,11 @@
     margin: auto;
 }
 
+.main_logo_link{
+    display: flex;
+    align-items: center;
+}
+
 .main_logo {
     height: 50px;
 
@@ -101,8 +106,8 @@
         display: none;
         height: auto;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.05);
-        backdrop-filter: blur(80px);
+        background-color: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(100px);
         line-height: 2em;
         width: 100vw;
         z-index: 1;

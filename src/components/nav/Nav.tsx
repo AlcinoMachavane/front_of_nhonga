@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import './Nav.css';
 import '../../assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css';
-import logotipo from '../../assets/images/system_images/icon/nhonga_logo_filled_bold.svg';
+import logotipo from '../../assets/images/system_images/icon/logo_oficial_de_nhonga.svg';
 import { useState } from 'react';
+
+import music from "../../assets/audio/african-sunset-motivational-upbeat-and-inspiring-130595.mp3"
 
 const nav_items = [
     { id: 1, page_name: "Home", rout: "/" },
@@ -25,9 +27,14 @@ function Nav() {
         <nav className="navbar">
             <div className="navbar_content_container">
                 {/* Link para a página inicial */}
-                <NavLink to="/" aria-label="Ir para a página inicial">
-                    <img className="main_logo" src={logotipo} alt="Logotipo da Nhonga" />
+                <NavLink className="main_logo_link" to="/" aria-label="Ir para a página inicial">
+                    <img className="main_logo" src={logotipo} alt="Logotipo da Client_page"/>
                 </NavLink>
+
+
+                <audio src={music} controls
+                       autoPlay loop></audio>
+
 
                 {/* Botão de exibição do menu */}
                 <button

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+input {
+    background: transparent;
+}
+
+.quantity_input_container {
+    display: flex;
+    max-width: 200px;
+    border-radius: 25px;
+    margin: 0 10px;
+}
+
+.quantity_input_button {
+    border: 1px solid #F7931E;
+    padding: 5px 10px;
+    font-weight: bold;
+    transition: .1s ease-in-out;
+}
+
+#minus {
+    border-radius: 25px 0 0 25px;
+}
+
+#plus {
+    border-radius: 0 25px 0 0;
+    border-right: 4px solid #F7931E;
+    border-bottom: 0;
+
+}
+
+.fa-minus, .fa-add{
+    display: flex;
+    font-size: 14pt;
+}
+
+.quantity_input_button:hover .fa-minus{
+    color: darkred;
+}
+
+.quantity_input_button:hover i{
+    color: darkgreen;
+}
+
+.quantity_input {
+    text-align: center;
+    width: 100px;
+    border-top: 1px solid #F7931E;
+    border-bottom: 1px solid #F7931E;
+    border-left: none;
+    border-right: none;
+}

@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({ data, type }) => {
     const { id, img, name, activity, description, price } = data;
 
     return (
-        <Link className="to_the_card" to={`/${type}/${id}`} key={id}>
+        <Link className="to_the_card" to={`/${type}/${id}/${name}/gallery`} key={id}>
             <article className="card">
                 <img className="card_image" alt={`Imagem de ${name}`} src={img} />
                 <h3 className="card_name">{name}</h3>

@@ -1,5 +1,5 @@
 import Card from "./../../Card.tsx";
-import company_data from "./../company_data.tsx"; // Dados de empresas
+import company_data from "./company_data.tsx"; // Dados de empresas
 
 const Company_card = () => {
     return (

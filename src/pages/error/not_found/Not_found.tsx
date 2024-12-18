@@ -3,7 +3,6 @@ function Not_found() {
     return (
         <>
             <main className={"main_of_page"}>
-                <div className={"content_width"}>
 
                     <section className={"nf_section"}>
                         <div className={"nf_content"}>
@@ -16,7 +15,6 @@ function Not_found() {
 
 
                     </section>
-                </div>
             </main>
         </>
 )

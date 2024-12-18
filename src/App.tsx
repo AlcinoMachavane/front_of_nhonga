@@ -11,13 +11,30 @@ import Not_found from './pages/error/not_found/Not_found';
 import Nav from "./components/nav/Nav.tsx";
 import Footer from "./components/footer/Footer.tsx";
 
+import Client_about from "./pages/client_pages/client_page/about/Client_about.tsx";
+import Contacts from "./pages/client_pages/client_page/contacts/Contacts.tsx";
+import Location from "./pages/client_pages/client_page/location/Location.tsx";
+import Gallery from "./pages/client_pages/client_page/gallery/Gallery.tsx";
+import Shopping_cart from "./components/model/Shopping_cart.tsx";
+
 const routes = [
-    { path: '/', element: <Home /> },
-    { path: '/acerca', element: <About /> },
-    { path: '/login', element: <Login /> },
-    { path: '/cadastro', element: <Register /> },
-    { path: '/politicas', element: <Policies /> },
-    { path: '*', element: <Not_found /> },
+    // Rotas gerais
+    {path: '/', element: <Home/>},
+    {path: '/acerca', element: <About/>},
+    {path: '/login', element: <Login/>},
+    {path: '/cadastro', element: <Register/>},
+    {path: '/politicas', element: <Policies/>},
+
+    // Rota de cards para empresas
+    {path: '/company/1/Nhonga/gallery', element: <Gallery/>},
+    // Rotas das paginas das empresas
+    {path: '/company/1/Nhonga/acerca', element: <Client_about/>},
+    {path: '/company/1/Nhonga/contactos', element: <Contacts/>},
+    {path: '/company/1/Nhonga/localizacao', element: <Location/>},
+
+    {path: '/carrinho', element: <Shopping_cart/>},
+    {path: '*', element: <Not_found/>},
+
 ];
 
 function App() {
@@ -27,11 +44,11 @@ function App() {
             <main>
                 <Routes>
                     {routes.map(route => (
-                        <Route key={route.path} path={route.path} element={route.element} />
+                        <Route key={route.path} path={route.path} element={route.element}/>
                     ))}
                 </Routes>
             </main>
-            <Footer />
+            <Footer/>
         </Router>
     );
 }

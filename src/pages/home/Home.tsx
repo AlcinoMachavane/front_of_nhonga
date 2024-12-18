@@ -9,9 +9,9 @@ function Home() {
     return (
         <>
             <main className={"main_of_page"}>
+                <Banner/>
                 <div className={"content_width"}>
-                    <Banner/>
-                    <h2 className={"caption"}>Lista de negocios</h2>
+                    <h2 className={"caption"}>Negócios</h2>
                     <section className={"standard_section"}>
                         <Company_card/>
                     </section>

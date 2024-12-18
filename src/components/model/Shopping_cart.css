@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* Estilos da galeria */
+
+.shopping_list_article{
+    border-left: 1px solid whitesmoke;
+    border-right: 10px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
+    border-bottom: 0;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 0 10px white;
+    border-radius: 10px 50px 0 10px;
+}
+
+.shopping_list_main_title{
+    margin: 10px;
+}
+
+.shopping_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.shopping_item_image{
+    width: 100px;
+    object-fit: cover;
+}
+
+.shopping_item_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 10px 20px;
+}
+
+.shopping_item_caption{
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+
+.shopping_item_buying_functionalities{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 20px;
+    /*border: 1px dotted #F7931E;*/
+}
+
+
+/* Tornar as imagens iniciais em telas pequenas */
+/*@media (max-width: 650px) {*/
+/*    .shopping_item {*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*    }*/
+
+    /*.shopping_item_image {*/
+        /*max-width: 300px;*/
+        /* Garantir que a imagem ocupe toda a largura disponível */
+        /*width: 100%;*/
+/*    }*/
+/*}*/
+
+@media (max-width: 650px) {
+    .shopping_item_image{
+        width: 60px;
+    }
+}
+
+

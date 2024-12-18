@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.small_button {
+    /*border: 1px solid #F7931E;*/
+    border-left: 1px solid #F7931E;
+    border-top: 1px solid #F7931E;
+    border-right: 4px solid #F7931E;
+    border-bottom: 0;
+    border-radius: 25px 25px 0 25px;
+    padding: 5px;
+    margin: 0 10px;
+
+}
+
+
+.small_button:hover > i {
+    color: white
+}
