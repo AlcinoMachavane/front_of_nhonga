@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+
 .track_article{
     display: flex;
     flex-direction: column;
