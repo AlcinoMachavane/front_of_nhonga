@@ -1,30 +1,41 @@
-import React, { useState, useEffect } from "react";
 import "./Location.css";
 import Company_nav from "../../../../components/company_nav/Company_nav.tsx";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import { useEffect, useRef } from "react";
+import L from "leaflet";
 
 function Location() {
-    const { isLoaded } = useJsApiLoader({
-        googleMapsApiKey: "YOUR_API_KEY",
-    });
-
-    const [position, setPosition] = useState({ lat: -25.9667, lng: 32.5833 });
+    // Tipando corretamente o useRef para um elemento HTMLDivElement ou null
+    const mapRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        // Simulação de movimentação
-        const interval = setInterval(() => {
-            setPosition((prev) => ({
-                lat: prev.lat + 0.001,
-                lng: prev.lng + 0.001,
-            }));
-        }, 2000); // Atualiza a posição a cada 2 segundos
+        if (mapRef.current) {
+            // Inicializa o mapa
+            const map = L.map(mapRef.current).setView([-25.9667, 32.5833], 12);
 
-        return () => clearInterval(interval);
+            // Adiciona camadas ao mapa
+            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                attribution: '© OpenStreetMap contributors',
+            }).addTo(map);
+
+            // Adiciona um marcador inicial
+            const marker = L.marker([-25.9667, 32.5833]).addTo(map);
+
+            // Simulação de movimentação do marcador
+            let lat = -25.9667;
+            let lng = 32.5833;
+            const interval = setInterval(() => {
+                lat += 0.001;
+                lng += 0.001;
+                marker.setLatLng([lat, lng]);
+            }, 2000); // Atualiza a posição a cada 2 segundos
+
+            // Cleanup
+            return () => {
+                clearInterval(interval);
+                map.remove();
+            };
+        }
     }, []);
-
-    if (!isLoaded) {
-        return <div>Carregando mapa...</div>;
-    }
 
     return (
         <>
@@ -32,18 +43,14 @@ function Location() {
                 <Company_nav />
                 <section className={"standard_section centralize"}>
                     <article className={"track_article"}>
-                        <div className={"map_container"}>
-                            <GoogleMap
-                                mapContainerStyle={{
-                                    width: "100%",
-                                    height: "500px",
-                                }}
-                                center={position}
-                                zoom={12}
-                            >
-                                <Marker position={position} />
-                            </GoogleMap>
-                        </div>
+                        <div
+                            className={"map_container"}
+                            ref={mapRef} // Referência do mapa
+                            style={{
+                                width: "100%",
+                                height: "500px",
+                            }}
+                        ></div>
                     </article>
                 </section>
             </main>
